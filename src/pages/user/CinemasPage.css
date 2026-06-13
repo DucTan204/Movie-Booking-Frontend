@@ -1,0 +1,136 @@
+/* CinemasPage.css - Giao diện hiện đại */
+
+.cinemas-list-page {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.cinemas-hero-section {
+  background: linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 80px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+}
+
+.hero-title {
+  font-family: var(--font-display); /* Sử dụng font Bebas Neue nếu có */
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Thanh tìm kiếm */
+.search-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cinema-search-input {
+  width: 100%;
+  padding: 15px 25px;
+  padding-right: 50px;
+  background: #161616;
+  border: 1px solid #333;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.cinema-search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+/* Grid rạp chiếu */
+.cinemas-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 60px 0;
+}
+
+.premium-cinema-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-cinema-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: #161616;
+}
+
+.card-image-placeholder {
+  width: 60px;
+  height: 60px;
+  background: rgba(229, 9, 20, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.c-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.c-address {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.badge-info {
+  font-size: 11px;
+  background: #222;
+  padding: 4px 12px;
+  border-radius: 50px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.go-detail {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 700;
+}

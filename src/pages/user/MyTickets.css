@@ -1,0 +1,222 @@
+/* 1. KHUNG TRANG CHÍNH */
+.my-tickets-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.my-tickets-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffc107;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 2. CONTAINER VÉ (CUỐNG VÉ) */
+.ticket-container {
+  display: flex;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.ticket-container:hover {
+  transform: translateY(-5px);
+  border-color: #444;
+}
+
+/* 3. PHẦN THÔNG TIN CHI TIẾT (BÊN TRÁI) */
+.ticket-info-left {
+  flex: 1.8;
+  padding: 30px;
+  border-right: 2px dashed #333; /* Đường xé vé */
+  position: relative;
+}
+
+/* Hiệu ứng lỗ tròn ở đường xé vé */
+.ticket-info-left::before, .ticket-info-left::after {
+  content: '';
+  position: absolute;
+  right: -11px;
+  width: 20px;
+  height: 20px;
+  background: #000; /* Khớp với background trang */
+  border-radius: 50%;
+}
+.ticket-info-left::before { top: -10px; }
+.ticket-info-left::after { bottom: -10px; }
+
+.ticket-code {
+  font-size: 0.8rem;
+  color: #888;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+
+.movie-title-display {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+/* Grid thông tin Rạp/Phòng/Suất chiếu */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.detail-item span {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.detail-item strong {
+  color: #eee;
+  font-size: 1rem;
+}
+
+.full-width { grid-column: span 2; }
+
+/* Danh sách ghế & đối tượng */
+.section-label {
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-wrapper { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.audience-tag {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seat-no { color: #ffc107; font-weight: bold; font-size: 1.1rem; }
+.aud-type { color: #ccc; font-size: 0.85rem; }
+
+/* 4. PHẦN THANH TOÁN & NÚT (BÊN PHẢI) */
+.ticket-info-right {
+  flex: 1;
+  padding: 30px;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.status-badge-boxed {
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.status-badge-boxed.paid {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.status-badge-boxed.pending {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid #ff9800;
+}
+
+.billing-info { margin: 20px 0; }
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.discount-value { color: #f44336; font-weight: bold; }
+.text-green { color: #4caf50; font-weight: bold; }
+
+.total-box {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.final-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffc107;
+}
+
+/* 5. KHỐI NÚT BẤM Ô VUÔNG */
+.ticket-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.square-action-btn {
+  background: #2a2a2a;
+  border: 1px solid #3d3d3d;
+  border-radius: 12px;
+  padding: 15px 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: white;
+}
+
+.square-action-btn:hover {
+  background: #333;
+  border-color: #ffc107;
+  transform: scale(1.03);
+}
+
+.refund-btn:hover {
+  border-color: #f44336;
+}
+
+.btn-icon { font-size: 1.5rem; margin-bottom: 5px; }
+.btn-text { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+
+.order-footer {
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 768px) {
+  .ticket-container { flex-direction: column; }
+  .ticket-info-left { border-right: none; border-bottom: 2px dashed #333; }
+  .ticket-info-left::before, .ticket-info-left::after { display: none; }
+}

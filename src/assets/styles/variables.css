@@ -1,0 +1,57 @@
+/* ─── Bảng màu chính – Đỏ/Đen kiểu CGV ──────────── */
+:root {
+  --primary: #E50914;
+  --primary-dark: #B00710;
+  --primary-light: #FF1F2D;
+  --primary-glow: rgba(229, 9, 20, 0.25);
+
+  --bg-black: #0A0A0A;
+  --bg-dark: #141414;
+  --bg-card: #1C1C1C;
+  --bg-card-hover: #242424;
+  --bg-surface: #2A2A2A;
+  --bg-input: #1E1E1E;
+
+  --text-white: #FFFFFF;
+  --text-primary: #F0F0F0;
+  --text-secondary: #A0A0A0;
+  --text-muted: #606060;
+  --text-disabled: #404040;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --border-red: rgba(229, 9, 20, 0.4);
+
+  --seat-normal: #3A3A3A;
+  --seat-normal-hover: #555555;
+  --seat-vip: #B8860B;
+  --seat-vip-hover: #DAA520;
+  --seat-selected: #E50914;
+  --seat-booked: #222222;
+  --seat-locked: #444444;
+
+  --success: #1DB954;
+  --warning: #F5A623;
+  --danger: #E50914;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.6);
+  --shadow-modal: 0 8px 48px rgba(0, 0, 0, 0.8);
+  --shadow-red: 0 0 20px rgba(229, 9, 20, 0.3);
+
+  --transition: 0.2s ease;
+  --transition-slow: 0.35s ease;
+
+  --font-display: 'Bebas Neue', 'Anton', cursive;
+  --font-body: 'DM Sans', 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --navbar-height: 64px;
+  --sidebar-width: 240px;
+}

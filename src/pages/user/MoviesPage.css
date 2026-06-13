@@ -1,0 +1,11 @@
+.movies-page { min-height: 100vh; }
+.movies-hero {
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 48px 0 32px;
+}
+.movies-body { padding-top: 32px; padding-bottom: 80px; }
+.movies-toolbar { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.movies-search { max-width: 400px; }
+@media (max-width: 640px) { .movies-search { max-width: 100%; } }
+

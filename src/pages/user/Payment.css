@@ -1,0 +1,267 @@
+/* ─── VARIABLES ──────────────────────────────── */
+:root {
+  --primary: #e50914;
+  --primary-hover: #ff0a16;
+  --success: #1db954;
+  --success-hover: #1ed760;
+  --bg-card: #1a1a1a;
+  --bg-body: #0a0a0a;
+  --border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  --radius-lg: 24px;
+  --radius-md: 14px;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ─── LAYOUT ─────────────────────────────────── */
+.payment-page {
+  padding: 60px 0 100px;
+  background: radial-gradient(circle at top, #1a0000 0%, var(--bg-body) 100%);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+/* ─── SHARED COMPONENTS (CARDS) ──────────────── */
+.qr-container, .order-summary, .payment-waiting, .payment-success {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ─── QR BLOCK ───────────────────────────────── */
+.qr-header span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.qr-image-wrapper {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 25px 0;
+  display: inline-block;
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.2);
+}
+
+.momo-actual-qr {
+  width: 280px;
+  height: 280px;
+  display: block;
+  object-fit: contain;
+}
+
+.qr-instruction {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary);
+  text-align: left;
+}
+
+.qr-instruction strong {
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-family: var(--font-mono);
+}
+
+/* ─── ORDER SUMMARY ──────────────────────────── */
+.order-summary {
+  position: sticky;
+  top: 100px;
+}
+
+.order-summary-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.order-row-value.mono {
+  font-family: var(--font-mono);
+  color: var(--primary);
+  background: rgba(229, 9, 20, 0.1);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.order-total {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px dashed var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-amount {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+/* ─── PAYMENT METHODS ────────────────────────── */
+.pay-method-card {
+  background: #222;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pay-method-card:hover {
+  background: #2a2a2a;
+  transform: translateX(5px);
+}
+
+.pay-method-card.selected {
+  border-color: #00c896;
+  background: rgba(0, 200, 150, 0.05);
+}
+
+.pay-badge-green {
+  background: linear-gradient(135deg, #00c896, #00a87a);
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ─── BUTTONS ────────────────────────────────── */
+.btn-action {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pay-confirm-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.pay-confirm-btn:hover:not(.disabled) {
+  background: var(--primary-hover);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-view-qr-payment {
+  background: linear-gradient(135deg, #00c853, #64dd17);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+
+/* Square Buttons (Ticket Actions) */
+.ticket-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.square-action-btn {
+  background: #252525;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.square-action-btn:hover {
+  border-color: #ffc107;
+  background: #2a2a2a;
+}
+
+.btn-text { font-size: 10px; font-weight: 800; color: #aaa; }
+
+/* ─── WAITING & SUCCESS STATES ───────────────── */
+.payment-waiting, .payment-success {
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.waiting-qr-block {
+  display: flex;
+  gap: 20px;
+  background: #111;
+  padding: 15px;
+  border-radius: var(--radius-md);
+  margin: 20px 0;
+  text-align: left;
+}
+
+.polling-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(0, 200, 150, 0.1);
+  color: #00c896;
+  font-weight: 600;
+  animation: pulse-glow 2s infinite;
+}
+
+/* ─── ANIMATIONS ─────────────────────────────── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.3); }
+  50% { box-shadow: 0 0 0 10px rgba(0, 200, 150, 0); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.waiting-icon { animation: bob 2s ease-in-out infinite; }
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 992px) {
+  .payment-layout { grid-template-columns: 1fr; }
+  .order-summary { position: static; }
+  .qr-container { padding: 25px; }
+  .momo-actual-qr { width: 100%; max-width: 240px; }
+}
+
+@media (max-width: 480px) {
+  .waiting-qr-block { flex-direction: column; align-items: center; text-align: center; }
+  .order-total-amount { font-size: 24px; }
+}
+
+/* Utilities */
+.text-green { color: #4caf50; }
+.discount-value { color: var(--primary); font-weight: bold; }

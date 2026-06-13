@@ -1,0 +1,235 @@
+/* --- MovieDetail.css: National Cinema Center Style --- */
+
+.movie-ncc-layout {
+  background: #0b0b0b;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ─── PHẦN HERO ─── */
+.ncc-hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start; 
+  padding-top: 50px; 
+  padding-bottom: 80px;
+  min-height: 500px; 
+  overflow: hidden;
+}
+
+.ncc-backdrop {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(50px) brightness(0.3);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.ncc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #0b0b0b);
+  z-index: 2;
+}
+
+.ncc-container {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ncc-hero-flex {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.ncc-poster {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.ncc-poster img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ncc-info {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.ncc-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.ncc-age-badge {
+  font-size: 18px;
+  background: #f12727;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.ncc-metadata p {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.ncc-desc {
+  margin: 30px 0;
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.8;
+  max-width: 800px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ncc-btn-book {
+  background: linear-gradient(90deg, #f12727, #b00710);
+  color: #fff;
+  border: none;
+  padding: 16px 50px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ncc-btn-book:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(241, 39, 39, 0.4);
+}
+
+/* ─── PHẦN LỊCH CHIẾU ─── */
+.ncc-showtime-section {
+  padding-bottom: 100px;
+  margin-top: -30px;
+}
+
+.ncc-section-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  border-left: 5px solid #f12727;
+  padding-left: 15px;
+}
+
+.ncc-date-tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.ncc-date-item {
+  min-width: 100px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #333;
+}
+
+.ncc-date-item:hover, .ncc-date-item.active {
+  background: #f12727;
+  border-color: #f12727;
+}
+
+.ncc-date-month { font-size: 11px; color: #888; text-transform: uppercase; }
+.ncc-date-day { font-size: 26px; font-weight: 800; margin: 2px 0; }
+.ncc-date-weekday { font-size: 12px; }
+
+.ncc-date-item.active .ncc-date-month,
+.ncc-date-item.active .ncc-date-weekday { color: #fff; }
+
+/* ─── TIME SLOTS (NÚT THỜI GIAN) ─── */
+.ncc-cinema-card {
+  background: #151515;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #222;
+}
+
+.ncc-cinema-name {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #f12727;
+}
+
+.ncc-time-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ncc-time-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #252525;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 12px 25px;
+  min-width: 110px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ncc-time-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.ncc-time-sub {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.ncc-time-btn:hover {
+  background: #f12727;
+  border-color: #f12727;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(241, 39, 39, 0.3);
+}
+
+.ncc-time-btn:hover .ncc-time-sub {
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 992px) {
+  .ncc-hero-flex { flex-direction: column; align-items: center; text-align: center; }
+  .ncc-desc { margin: 20px auto; }
+}

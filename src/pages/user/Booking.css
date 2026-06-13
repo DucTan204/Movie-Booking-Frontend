@@ -1,0 +1,209 @@
+/* --- TẤT CẢ CSS ĐỀU ĐƯỢC GIỚI HẠN TRONG .booking-scope --- */
+
+.booking-scope {
+    padding: 60px 0 100px;
+    background-color: #0b0b0b;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.booking-scope .booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ─── KHỐI THÔNG TIN PHIM ─── */
+.booking-scope .booking-movie-card {
+    display: flex;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.booking-scope .movie-card-poster {
+    width: 60px;
+    height: 85px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.booking-scope .movie-title {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.booking-scope .movie-meta {
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    gap: 12px;
+}
+
+/* ─── SƠ ĐỒ GHẾ ─── */
+.booking-scope .seat-selection-section {
+    background: #111111;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.booking-scope .screen-container {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.booking-scope .screen-bar {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #f39c12, transparent);
+    box-shadow: 0 12px 25px rgba(243, 156, 18, 0.5);
+    width: 80%;
+    margin: 0 auto 10px;
+}
+
+.booking-scope .screen-label {
+    font-size: 11px;
+    color: #444;
+    letter-spacing: 8px;
+}
+
+.booking-scope .seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.booking-scope .seat-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.booking-scope .seat-row-label {
+    width: 25px;
+    font-size: 12px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* ─── NÚT GHẾ (Scope riêng để không hỏng button trang Home) ─── */
+.booking-scope .seat-btn {
+    width: 34px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    background: #2c2c2c;
+    color: #999;
+}
+
+.booking-scope .seat-vip { background: #f39c12 !important; color: #000 !important; }
+.booking-scope .seat-couple { background: #e74c3c !important; color: #fff !important; width: 70px; }
+.booking-scope .seat-selected { background: #3498db !important; color: #fff !important; }
+.booking-scope .seat-booked { background: #1a1a1a !important; color: #333 !important; cursor: not-allowed; }
+
+/* ─── CHÚ THÍCH ─── */
+.booking-scope .seat-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid #222;
+}
+
+.booking-scope .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #777; }
+.booking-scope .legend-box { width: 16px; height: 16px; border-radius: 3px; }
+.booking-scope .seat-booked-box { background: #1a1a1a; }
+.booking-scope .seat-selected-box { background: #3498db; }
+.booking-scope .seat-normal-box { background: #2c2c2c; }
+.booking-scope .seat-vip-box { background: #f39c12; }
+.booking-scope .seat-couple-box { background: #e74c3c; }
+
+/* ─── SIDEBAR ─── */
+.booking-scope .booking-summary {
+    background: #111111;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #222;
+    position: sticky;
+    top: 100px;
+}
+
+.booking-scope .summary-title {
+    color: #e74c3c;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;
+}
+
+.booking-scope .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.booking-scope .summary-label { color: #666; }
+.booking-scope .summary-value { color: #ddd; text-align: right; font-weight: 500; }
+.booking-scope .selected-seats-list { color: #3498db; font-weight: bold; }
+
+.booking-scope .summary-total-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    border: 1px solid #222;
+}
+
+.booking-scope .total-price { font-size: 24px; font-weight: 800; color: #fff; }
+
+.booking-scope .booking-confirm-btn {
+    width: 100%;
+    height: 52px;
+    background: #222;
+    color: #444;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+
+.booking-scope .booking-confirm-btn.active { background: #c0392b; color: #fff; cursor: pointer; }
+
+.booking-scope .booking-timer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+.booking-scope .timer-countdown {
+    color: #e74c3c;
+    font-weight: 800;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .booking-scope .booking-layout { grid-template-columns: 1fr; }
+    .booking-scope .booking-summary { position: static; }
+}

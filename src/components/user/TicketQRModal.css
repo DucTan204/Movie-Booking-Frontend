@@ -1,0 +1,64 @@
+.qr-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.qr-modal {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 36px 32px;
+  width: 380px;
+  max-width: 95vw;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-modal);
+}
+.qr-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none;
+  color: var(--text-muted); font-size: 20px;
+  cursor: pointer;
+}
+.qr-title {
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--primary); margin-bottom: 20px;
+}
+.qr-image-wrap {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.qr-image { width: 220px; height: 220px; display: block; }
+.qr-code-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.qr-status { margin-bottom: 14px; font-size: 0.95rem; }
+.status-badge { font-weight: 600; margin-left: 6px; }
+.status-valid   { color: #1db954; }
+.status-used    { color: var(--primary); }
+.status-expired { color: #f5a623; }
+.status-cancelled { color: #888; }
+.qr-blockchain {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  word-break: break-all;
+  margin-bottom: 14px;
+  text-align: left;
+}
+.blockchain-label { color: #f5a623; margin: 0 6px; }
+.qr-loading, .qr-error { padding: 40px 0; color: var(--text-muted); }
+.qr-error { color: var(--primary); }
+.qr-note {
+  font-size: 0.8rem; color: var(--text-muted);
+  margin-top: 10px; line-height: 1.5;
+}

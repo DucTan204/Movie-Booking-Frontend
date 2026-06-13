@@ -1,0 +1,68 @@
+.transfer-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.transfer-modal {
+  background: var(--bg-card); border-radius: 16px;
+  padding: 36px 32px; width: 420px; max-width: 95vw;
+  position: relative; box-shadow: var(--shadow-modal);
+}
+.transfer-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none;
+  color: var(--text-muted); font-size: 20px; cursor: pointer;
+}
+.transfer-title {
+  font-size: 1.25rem; font-weight: 700; color: var(--primary);
+  margin-bottom: 20px;
+}
+.transfer-movie-info {
+  background: var(--bg-surface); border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 20px;
+}
+.transfer-movie-name { font-weight: 700; font-size: 1rem; color: #fff; }
+.transfer-showtime   { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+
+.transfer-breakdown {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 18px;
+}
+.breakdown-row {
+  display: flex; justify-content: space-between;
+  font-size: 0.9rem; color: var(--text-secondary,#ccc);
+}
+.fee-row    { color: var(--primary); }
+.refund-row { font-weight: 700; font-size: 1.05rem; color: #1db954;
+              border-top: 1px solid rgba(255,255,255,0.08);
+              padding-top: 10px; margin-top: 4px; }
+.fee-amount    { color: var(--primary); }
+.refund-amount { color: #1db954; }
+
+.transfer-notice {
+  background: rgba(245,166,35,0.12);
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: 8px; padding: 12px 14px;
+  font-size: 0.82rem; color: #f5a623;
+  margin-bottom: 22px; line-height: 1.5;
+}
+.transfer-actions { display: flex; gap: 10px; }
+.btn-cancel-transfer {
+  flex: 1; background: var(--bg-surface); color: var(--text-muted);
+  border: none; border-radius: 10px; padding: 12px;
+  font-weight: 600; cursor: pointer;
+}
+.btn-confirm-transfer {
+  flex: 2; background: var(--primary); color: #fff;
+  border: none; border-radius: 10px; padding: 12px;
+  font-weight: 700; cursor: pointer;
+}
+.btn-confirm-transfer:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.transfer-result { text-align: center; padding: 16px 0; }
+.result-icon { font-size: 3rem; margin-bottom: 16px; }
+.transfer-result h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+.transfer-result.success h3 { color: #1db954; }
+.transfer-result.error   h3 { color: var(--primary); }
+.transfer-result p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }

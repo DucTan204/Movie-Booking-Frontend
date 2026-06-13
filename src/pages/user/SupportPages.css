@@ -1,0 +1,98 @@
+.support-page {
+  padding: 60px 0 100px;
+}
+
+.support-content {
+  padding: 40px;
+  margin-top: 30px;
+}
+
+/* Style cho Hướng dẫn đặt vé */
+.guide-step {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.step-number {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--primary);
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.step-text h3 {
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.step-text p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Style cho Điều khoản/Chính sách */
+.text-block h3 {
+  color: var(--primary);
+  margin: 24px 0 12px;
+  font-size: 18px;
+}
+
+.text-block p, .text-block li {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.highlight-box {
+  background: rgba(229, 9, 20, 0.1);
+  border-left: 4px solid var(--primary);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* --- PHẦN SỬA CHO LIÊN HỆ --- */
+.support-grid {
+  display: flex;            /* Chuyển từ grid sang flex */
+  justify-content: center;  /* Căn giữa card vào giữa màn hình */
+  margin-top: 30px;
+}
+
+.contact-info {
+  max-width: 650px;         /* Giới hạn chiều rộng để card trông gọn gàng */
+  width: 100%;
+  padding: 40px;            /* Tăng padding cho thoáng */
+}
+
+.contact-info h3 {
+  color: var(--text-white);
+  margin-bottom: 25px;
+  font-size: 22px;
+  text-align: center;       /* Căn giữa tiêu đề liên hệ */
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links-large {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.social-tag {
+  display: block;
+  margin-top: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Xóa các style cũ của contact-form vì không dùng nữa */
