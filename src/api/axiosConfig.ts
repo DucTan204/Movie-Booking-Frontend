@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ─── CẤU HÌNH AXIOS INSTANCE ───────────────────────────
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://moviebooking-2-5yfi.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
